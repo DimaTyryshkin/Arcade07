@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1921a7122e710ab46a1a5022bfe502a1, type: 3}
-  m_Name: plane
+  m_Name: tile-plane
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: 861064322, guid: bf0f21805d14ba3459c7886bd0df4b22, type: 3}
   m_DefaultGameObject: {fileID: 0}

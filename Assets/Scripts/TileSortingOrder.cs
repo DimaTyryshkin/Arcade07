@@ -1,10 +1,10 @@
 ﻿using GamePackages.Core;
-using UnityEngine;
+using UnityEngine; 
 using UnityEngine.Assertions;
 
 namespace Action7
 {
-	[RequireComponent(typeof(SpriteRenderer))]
+	[RequireComponent(typeof(SpriteRenderer))] 
 	public class TileSortingOrder : MonoBehaviour
 	{
 		[SerializeField] string groupName;
@@ -22,7 +22,7 @@ namespace Action7
 		{
 			get => order;
 			set
-			{
+			{ 
 				if (order != value)
 				{
 					order = value;
@@ -68,8 +68,8 @@ namespace Action7
 					var tileDown = system.TileByCell(cell);
 					if (tileDown && tileDown.GroupName == GroupName)
 					{
-						//GizmosDrawer.Inst.GetMarker(tileDown.transform.position).Text("Tile").Duration(10);
-						//GizmosDrawer.Inst.AddArrow(transform.position, tileDown.transform.position).Duration = 10;
+						GizmosDrawer.Inst.GetMarker(tileDown.transform.position).Text("Tile").Duration(10);
+						GizmosDrawer.Inst.AddArrow(transform.position, tileDown.transform.position).Duration = 10;
 						Order = tileDown.CalculateOrder();//+ 1 * system.heightToLayerFactor;
 						return Order;
 					}

@@ -506,27 +506,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile-map_21
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b86225b92e26e6149819510186a27fe2
-      internalID: -1831150104
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tile-map_22
       rect:
         serializedVersion: 2
@@ -1640,27 +1619,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile-map_71
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a71c34ee90f4f2340979a71f84af330a
-      internalID: 1834400747
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tile-map_72
       rect:
         serializedVersion: 2
@@ -1744,27 +1702,6 @@ TextureImporter:
       bones: []
       spriteID: cd442bce952abf3458d794e5d84ce928
       internalID: -2089862167
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile-map_76
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2fad091662e4e741b78df83356c5f07
-      internalID: 1384547092
       vertices: []
       indices: 
       edges: []
@@ -3718,6 +3655,27 @@ TextureImporter:
       bones: []
       spriteID: b219e30a0041318409220a34d91e01f9
       internalID: 26514862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile-map_21
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93aa181786d30b64a8f01f6435b36205
+      internalID: -1831150104
       vertices: []
       indices: 
       edges: []
