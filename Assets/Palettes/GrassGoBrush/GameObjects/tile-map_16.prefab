@@ -97,5 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9ee51e3bd943e9b5bff64c036425d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDynamic: 0
+  groupName: "\u043A\u0430\u043A\u0442\u0443\u0441-1"
   offset: 0
+  isDynamic: 0

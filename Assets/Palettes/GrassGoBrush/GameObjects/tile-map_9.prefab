@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 664136240702026477}
   - component: {fileID: 6549515766361809288}
   m_Layer: 0
-  m_Name: tile-map_10
+  m_Name: tile-map_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1353721944, guid: bf0f21805d14ba3459c7886bd0df4b22, type: 3}
+  m_Sprite: {fileID: 1142744396, guid: bf0f21805d14ba3459c7886bd0df4b22, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,5 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9ee51e3bd943e9b5bff64c036425d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groupName: "\u043A\u0430\u043A\u0442\u0443\u0441-1"
+  offset: 0
   isDynamic: 0
-  offset: 1
