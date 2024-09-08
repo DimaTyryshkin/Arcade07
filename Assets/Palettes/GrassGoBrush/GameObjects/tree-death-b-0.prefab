@@ -98,5 +98,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groupName: tree-death-b
-  offsetY: 0
+  yOffsetInPixelsFromBotBase: 1
   isDynamic: 0

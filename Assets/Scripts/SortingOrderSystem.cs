@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using GamePackages.Core;
 using GamePackages.Core.Validation;
 using NaughtyAttributes;
 using UnityEngine;
@@ -15,7 +14,8 @@ namespace Action7
 
 		Dictionary<Vector3Int, TileSortingOrder> cellToTile;
 
-		public readonly int heightToLayerFactor = 1;
+		readonly int heightToLayerFactor = 16;
+		public readonly int PixelsPerUnit = 16;
 		float MaxY { get; set; }
 
 		void OnDrawGizmos()
@@ -24,8 +24,57 @@ namespace Action7
 			//GizmosExtension.DrawBounds(GetTimeMapWorldBounds(tilemap));
 		}
 
-		[Button()]
+		
 		void Start()
+		{
+			Calculate();
+		}
+
+		Bounds GetTimeMapWorldBounds(Tilemap tilemap)
+		{
+			Vector3 size = tilemap.cellBounds.size;
+			size.x *= grid.cellSize.x;
+			size.y *= grid.cellSize.y;
+			size.z *= grid.cellSize.z;
+
+			Vector3 center = tilemap.transform.position;
+			Vector3 offset = tilemap.cellBounds.center;
+			offset.x *= grid.cellSize.x;
+			offset.y *= grid.cellSize.y;
+
+			
+			return new Bounds(center + offset, size);
+		}
+
+		public int GetOrderFromY(float yPosition)
+		{
+			if (yPosition > MaxY)
+				Debug.LogError(yPosition > MaxY);
+
+
+			float fromTopToPosition = -(yPosition - MaxY);
+			return (int)(fromTopToPosition * heightToLayerFactor);
+		}
+
+		public TileSortingOrder TileByCell(Vector3 world)
+		{
+			var cell = grid.WorldToCell(world);
+			return cellToTile.GetValueOrDefault(cell);
+		}
+		
+		public Vector3Int WorldToCell(Vector3 world)
+		{
+			return grid.WorldToCell(world); 
+		}
+		
+		public TileSortingOrder GetByCell(Vector3 world)
+		{
+			var cell = grid.WorldToCell(world);
+			return cellToTile[cell];
+		}
+
+		[Button()]
+		public void Calculate()
 		{
 			MaxY = GetTimeMapWorldBounds(tilemap).max.y; 
 			cellToTile = new Dictionary<Vector3Int, TileSortingOrder>();
@@ -57,48 +106,6 @@ namespace Action7
 				sortingOrder.CalculateOrder();
 
 			cellToTile = null;
-		}
-
-		Bounds GetTimeMapWorldBounds(Tilemap tilemap)
-		{
-			Vector3 size = tilemap.cellBounds.size;
-			size.x *= grid.cellSize.x;
-			size.y *= grid.cellSize.y;
-			size.z *= grid.cellSize.z;
-
-			Vector3 center = tilemap.transform.position;
-			Vector3 offset = tilemap.cellBounds.center;
-			offset.x *= grid.cellSize.x;
-			offset.y *= grid.cellSize.y;
-
-			
-			return new Bounds(center + offset, size);
-		}
-
-		public int GetOrderFromY(float yPosition)
-		{
-			if (yPosition > MaxY)
-				Debug.LogError(yPosition > MaxY);
-
-
-			return heightToLayerFactor * (int)(-(yPosition - MaxY));
-		}
-
-		public TileSortingOrder TileByCell(Vector3 world)
-		{
-			var cell = grid.WorldToCell(world);
-			return cellToTile.GetValueOrDefault(cell);
-		}
-		
-		public Vector3Int WorldToCell(Vector3 world)
-		{
-			return grid.WorldToCell(world); 
-		}
-		
-		public TileSortingOrder GetByCell(Vector3 world)
-		{
-			var cell = grid.WorldToCell(world);
-			return cellToTile[cell];
 		}
 	}
 }

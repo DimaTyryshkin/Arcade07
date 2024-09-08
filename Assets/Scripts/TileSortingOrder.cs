@@ -9,7 +9,9 @@ namespace Action7
 	public class TileSortingOrder : MonoBehaviour
 	{
 		[SerializeField] string groupName;
-		[SerializeField] float offsetY;
+		
+		[Tooltip("Сколько пикселей от низа кортинки до низа объекта")] 
+		[SerializeField] float yOffsetInPixelsFromBotBase;
 		[SerializeField] bool isDynamic;
 
 		int order;
@@ -33,14 +35,14 @@ namespace Action7
 		}
 
 		public void Start()
-		{ 
+		{
 			if (!isDynamic && Application.isPlaying)
-				Destroy(this);
+				enabled = false;
 		}
 
 		void LateUpdate()
 		{
-			Order = GetOrderFromY(transform.position.y);
+			Order = GetOrder();
 		}
 
 		public void Init(SortingOrderSystem system)
@@ -62,6 +64,7 @@ namespace Action7
 		{
 			if (order == -1)
 			{
+				
 				Vector3 pos = transform.position;
 
 				Assert.IsFalse(isDynamic && !string.IsNullOrEmpty(GroupName));
@@ -80,22 +83,25 @@ namespace Action7
 						return Order;
 					}
 				}
-
-				Order = GetOrderFromY(pos.y);
+				
+				Order = GetOrder();
 			}
 
 			return order;
 		}
 
-		int GetOrderFromY(float y)
+		int GetOrder()
 		{
-			return system.GetOrderFromY(y + offsetY);
+			float y = spriteRenderer.bounds.min.y;
+			float additionalOffset = yOffsetInPixelsFromBotBase / (float)system.PixelsPerUnit; 
+			return system.GetOrderFromY(y + additionalOffset);
 		}
 
 		[Button()]
 		void Calculate()
 		{
-			CalculateOrder();
+			
+			transform.GetComponentInParent<SortingOrderSystem>().Calculate();
 		}
 	}
 }

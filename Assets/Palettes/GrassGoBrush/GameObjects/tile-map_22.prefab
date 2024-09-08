@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groupName: "\u043A\u0430\u043A\u0442\u0443\u0441-1"
-  offsetY: 0
+  yOffsetInPixelsFromBotBase: 8
   isDynamic: 0
 --- !u!114 &3120035519735639450
 MonoBehaviour:
