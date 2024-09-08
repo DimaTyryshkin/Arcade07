@@ -3495,7 +3495,7 @@ TextureImporter:
       name: tile-map_140
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 304
         width: 16
         height: 16
@@ -3516,7 +3516,7 @@ TextureImporter:
       name: tile-map_141
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 288
         width: 16
         height: 16
@@ -3537,7 +3537,7 @@ TextureImporter:
       name: tile-map_142
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 288
         width: 16
         height: 16
@@ -3558,7 +3558,7 @@ TextureImporter:
       name: tile-map_143
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 304
         width: 16
         height: 16
@@ -3579,7 +3579,7 @@ TextureImporter:
       name: tile-map_144
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 288
         width: 16
         height: 16
@@ -3806,6 +3806,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: tile-map_130-icon
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599ed1d172a34b247ac9aa0de69a3fe5
+      internalID: 542578347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile-map_140-icon
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccecaaac9c8a1c4092e51501c663960
+      internalID: 601633024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile-map_4-icon
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ed7c980c682af4faf5d2dc5259018c
+      internalID: 996444139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile-map_24-icon
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19d08ed8bb95de47bb3c876af381a59
+      internalID: 1247674982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -3854,6 +3938,7 @@ TextureImporter:
       tile-map_129: 886229976
       tile-map_13: -2090667706
       tile-map_130: 1240263220
+      tile-map_130-icon: 1885227821
       tile-map_131: -322890980
       tile-map_132: -440025158
       tile-map_133: -1656149614
@@ -3865,6 +3950,7 @@ TextureImporter:
       tile-map_139: -446501444
       tile-map_14: 892429410
       tile-map_140: 14880912
+      tile-map_140-icon: 601633024
       tile-map_141: 1497045146
       tile-map_142: 533474359
       tile-map_143: 596996314
@@ -3881,7 +3967,6 @@ TextureImporter:
       tile-map_153: -526661740
       tile-map_154: -1055571356
       tile-map_155: -737921346
-      tile-map_156: 1885227821
       tile-map_157: -577067044
       tile-map_158: -798292475
       tile-map_159: -384917519
@@ -3920,6 +4005,7 @@ TextureImporter:
       tile-map_23: 861064322
       tile-map_23-: 1489108654
       tile-map_24: 618627977
+      tile-map_24-icon: 1247674982
       tile-map_25: 845074784
       tile-map_26: -802076042
       tile-map_27: -1448953522
@@ -3937,6 +4023,7 @@ TextureImporter:
       tile-map_38: 1225544143
       tile-map_39: -676668088
       tile-map_4: 1604907788
+      tile-map_4-icon: 996444139
       tile-map_40: 918697892
       tile-map_41: 1964783963
       tile-map_42: 782699874
