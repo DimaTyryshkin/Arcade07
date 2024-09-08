@@ -1,4 +1,5 @@
 ﻿using GamePackages.Core;
+using NaughtyAttributes;
 using UnityEngine; 
 using UnityEngine.Assertions;
 
@@ -51,7 +52,12 @@ namespace Action7
 			spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 			Order = -1;
 		}
-		
+
+		public void SetGroupName(string groupName)
+		{
+			this.groupName = groupName;
+		}
+
 		public int CalculateOrder()
 		{
 			if (order == -1)
@@ -84,6 +90,12 @@ namespace Action7
 		int GetOrderFromY(float y)
 		{
 			return system.GetOrderFromY(y + offsetY);
+		}
+
+		[Button()]
+		void Calculate()
+		{
+			CalculateOrder();
 		}
 	}
 }

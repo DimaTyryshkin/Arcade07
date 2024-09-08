@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1921a7122e710ab46a1a5022bfe502a1, type: 3}
   m_Name: tile-ground-grass-dark
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 1283848496, guid: bf0f21805d14ba3459c7886bd0df4b22, type: 3}
+  m_DefaultSprite: {fileID: 14880912, guid: bf0f21805d14ba3459c7886bd0df4b22, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:
@@ -273,4 +273,4 @@ MonoBehaviour:
     - {x: -1, y: 0, z: 0}
     - {x: -1, y: -1, z: 0}
     m_RuleTransform: 0
-  similarTo: {fileID: 11400000, guid: bb0fef1980b148d4cbfb427e2c81cd06, type: 2}
+  connectedWith: []

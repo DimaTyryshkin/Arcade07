@@ -4,7 +4,7 @@ using UnityEngine.Tilemaps;
 [CreateAssetMenu]
 public class NewCustomRuleTile : RuleTile<NewCustomRuleTile.Neighbor>
 {
-    public Object similarTo;
+    public Object[] connectedWith;
 
     public class Neighbor : RuleTile.TilingRule.Neighbor
     {
@@ -28,19 +28,10 @@ public class NewCustomRuleTile : RuleTile<NewCustomRuleTile.Neighbor>
                 {
                     if (other is NewCustomRuleTile r)
                     {
-                        if (r.similarTo)
-                        {
-                            if (this == r.similarTo)
-                            {
-                                return true;
-                            }
-                            else
-                            {
-                                return false;
-                            }
-                        }
+                        if (IsConnected(r))
+                            return true;
                         else
-                            return false;
+                            return false; 
                     }
 
                     return true;
@@ -57,17 +48,8 @@ public class NewCustomRuleTile : RuleTile<NewCustomRuleTile.Neighbor>
                 {
                     if (other is NewCustomRuleTile r)
                     {
-                        if (r.similarTo)
-                        {
-                            if (this == r.similarTo)
-                            {
-                                return false;
-                            }
-                            else
-                            {
-                                return true;
-                            }
-                        }
+                        if (IsConnected(r))
+                            return false;
                         else
                             return true;
                     }
@@ -95,5 +77,20 @@ public class NewCustomRuleTile : RuleTile<NewCustomRuleTile.Neighbor>
         // }
 
         return true;
+    }
+
+
+    bool IsConnected(TileBase tile)
+    {
+        if (connectedWith == null)
+            return false;
+        
+        foreach (var t in connectedWith)
+        {
+            if (t == tile)
+                return true;
+        }
+
+        return false;
     }
 }

@@ -3680,6 +3680,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: tile-map_176
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 32
+        width: 48
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.17021276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719b119c4f5432b4aaa1b972d4702554
+      internalID: 1985432266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -3777,6 +3798,7 @@ TextureImporter:
       tile-map_173: -976760268
       tile-map_174: -274631502
       tile-map_175: -1178984981
+      tile-map_176: 1985432266
       tile-map_18: -231289715
       tile-map_19: -1413029990
       tile-map_2: -199874262
