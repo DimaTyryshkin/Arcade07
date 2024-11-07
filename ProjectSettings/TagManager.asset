@@ -41,12 +41,12 @@ TagManager:
   - name: Back
     uniqueID: 544474873
     locked: 0
-  - name: Default
-    uniqueID: 0
-    locked: 0
-  - name: Colliders
-    uniqueID: 3311794653
+  - name: Shadow
+    uniqueID: 3477217247
     locked: 0
   - name: Top
     uniqueID: 1846195719
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0

@@ -316,4 +316,5 @@ MonoBehaviour:
     - {x: -1, y: 0, z: 0}
     - {x: -1, y: -1, z: 0}
     m_RuleTransform: 0
-  similarTo: {fileID: 11400000, guid: cdb6d393a82b4794e81f84a3c95465a9, type: 2}
+  connectedWith:
+  - {fileID: 11400000, guid: c1001935dd8116b4e8b568c1713c8818, type: 2}

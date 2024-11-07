@@ -14,6 +14,11 @@ namespace Action7
 		[SerializeField] float yOffsetInPixelsFromBotBase;
 		[SerializeField] bool isDynamic;
 
+		public bool left;
+		public bool down;
+		public bool right;
+		
+		
 		int order;
 		Transform thisTransform;
 		SpriteRenderer spriteRenderer;

@@ -1,0 +1,104 @@
+BlockDto // что реальлно стоит на карте
+    BlockClassDto
+    float hp = 100 // 100 - новый, 0 разрушен
+        
+BlockClassDto //что можно купить, выбрать в магазине, скрафтить, построить
+    BlockType
+    Level
+    
+class BuildMenu
+    OnClickBuildWall(level)
+        builder = new WallBuilder(ship, level, hp:100)
+    
+    OnClickBuildEngine(level)
+        builder = new EngineBuilder(ship, level)
+
+
+abstract class BlockBuilder
+    Ship ship
+    int level
+    int rotation
+    
+    Update()
+        mousePos = Inpit.GetPos()
+        cell = ship.grid.GetCell(mousePos)
+        
+        preview.pos = ship.grid.CellToPos(cell)
+        
+        buildCast = CastBuilding(cell)
+        preview.ShowBuildAvailable(buildCast.buildAvailable)
+        if buildCast.buildAvailable
+            buildCastErrorPresenter.Hide()
+            if Input.MouseDown()
+                BuildNewBlock(cell)
+        else
+            buildCastErrorPresenter.ShowError(buildCast.msg)
+        
+        if Input.PressR()
+            rotation = rotation.RotateRight()
+        
+    InstantiateBlock<T>(prefab, cell)
+        localPos = Grid.GetLocalPos(cell)
+        newBlock = InstantiateAsShild<T>(blockRoot, prefab, grid.pos + localPos)
+        newBlock.cell = cell
+        return newBlock as T
+        
+    abstract CastBuilding(cell)
+    
+    virtual BuildNewBlock(cell)
+        Asser.IsNull(ship.GetBlock(cell))
+        newBlock = BuildNewBlock(cell)
+        foreach buildingPostProcessor
+            postProcess.Apply(newBlock)// Например добавляем урон, или декорации - заросли плесени.
+        
+
+class WallBuilder : BlockBuilder
+    WallBlock[] prefabs
+    
+    override CastBuilding(cell)
+        
+    override BuildNewBlock(cell)
+        prefab = prefabs[level]
+        newBlock = InstantiateBlock(prefab, cell)
+        ship.cellToWallBlock[cell] = newBlock
+        return newBlock
+
+class ship
+    Dictionary<cell, WallBlockDto> cellToWallBlock
+    
+        
+    Save() 
+        save = new Save()
+        foreach cellToWallBlock
+            wallBlock.Save(save)
+            
+    Load(save)
+        cellToWallBlock = new
+        foreach save.WallBlocks
+            newWallBlock = InstantiateWallBlock(ship, wallBlockSave.level, wallBlockSave.cell)
+            newWallBlock.SetSave(wallBlockSave)
+            
+    
+        
+        
+        
+Block
+    abstract Save(save)
+        
+WallBlock : Block
+    override Save(save)
+        wallBlockSave = new WallBlockSave
+        {
+            cell = cell,
+            rotation = rotation,
+            level = level,
+            hp = Hp,
+        }
+        save.WallBlocks.Add(wallBlockSave)
+        
+    void SetData(wallBlockSave)
+        Hp = wallBlockSave.hp
+        
+        
+        
+  

@@ -1,0 +1,13 @@
+InventoryListView
+    Draw()
+        foreach inventoryList
+            item = inventoryList[i]
+            if item.Stack
+                AddButtonStack(item.Sprite, item.Count)
+            else
+                AddButtonNonStack(item.Sprite, item.hp)
+            
+        OnClickItem(int index)
+            item = inventory.GetByIndex(index)
+            inventory.inHend = item
+            
